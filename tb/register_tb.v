@@ -1,9 +1,9 @@
 module reg_testbench;
-reg [31:0]ins;
-reg clk;
-wire [4:0]rs1,rs2,rd;
-wire signed [31:0]imm;
-wire [3:0]aluop;
+reg [31:0]write_data;
+reg clk, rst, wrt_en;
+reg [4:0]oprs1,oprs2,oprd;
+wire [31:0] rs1, rs2;
+// wire [3:0]aluop;
 
 register reg_dut_inst(
     .clk(clk),
