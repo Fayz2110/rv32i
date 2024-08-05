@@ -1,19 +1,20 @@
-module decode(ins,oprs1,oprs2,oprd,aluop,imm);
+module decode(
 
-input  [31:0]ins;
-output  reg[4:0] oprs1,oprs2,oprd;
-output reg[3:0] aluop;
-output  reg signed[31:0] imm;
-output  reg wrt_en;
+input  [31:0]ins,
+output  reg[4:0] oprs1,oprs2,oprd,
+output reg[3:0] aluop,
+output  reg signed[31:0] imm,
+output  reg wrt_en
+
+);
 reg i_type,r_type;
-wire  [6:0] opcode;
+
 reg  signed[11:0] imm_d;
 
-assign opcode=ins[6:0];
 
 
 always @(ins) begin
- // opcode=ins[6:0];
+ 
 case(ins[6:0])
 7'b0010011: begin i_type=1'b1; r_type=1'b0; end
 7'b0110011: begin r_type=1'b1; i_type=1'b0; end
