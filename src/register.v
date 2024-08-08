@@ -8,17 +8,17 @@ output wire [31:0] rs1,rs2
 
 reg [31:0] register [31:0];
 
-reg [4:0] i;
+integer i;
 
 
 
 
-always @(posedge clk)begin
-  //  if(rst)begin
-     //   for (i = 0; i <= 31; i=i+1) begin
-    //        register[i] = 0;
-    //    end
-  //  end 
+always @(posedge clk or rst)begin
+    if(rst)begin
+        for (i = 0; i <= 31; i=i+1) begin
+            register[i] = 0;
+        end
+    end 
     if(wrt_en)begin
     register[oprd]<=wrt_data;
     register[0]=0;

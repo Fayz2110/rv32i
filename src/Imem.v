@@ -1,4 +1,5 @@
 `timescale 1ns / 1ps
+//`include "memory.txt"
 //////////////////////////////////////////////////////////////////////////////////
 // Company: 
 // Engineer: 
@@ -28,14 +29,26 @@ output reg [31:0] data_out
 
  );
  reg [31:0]memory [4095:0];
- 
+ reg cnt;
+ reg[31:0] pc;
+ integer i;
+  initial begin
+        $readmemh("mem.txt", memory); // Use $readmemb for binary file
+        cnt=1;
+    end
+  
  always @(posedge clk) begin
  if(rst)begin
- data_out<=0;
+ for(i=0;i<=4095;i=i+1)begin
+    memory[i]=0;
+    $readmemh("mem.txt", memory);
+    end
  end
  else begin
- data_out<=memory[pc_in[31:2]];
+ pc=pc_in[31:2];
+ data_out=memory[pc_in[31:2]];
  end
+ 
  
  end
     
