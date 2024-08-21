@@ -59,6 +59,9 @@ output reg [31:0]alu_out
     4'b0111:begin
     alu_out=in1&in2;
     end
+    4'b1111:begin
+    alu_out=in2;
+    end
     endcase
     end
 endmodule

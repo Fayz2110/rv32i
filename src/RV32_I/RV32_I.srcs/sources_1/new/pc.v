@@ -24,27 +24,29 @@ module pc(
 input clk,
 input rst,
 input [31:0] pc_in,
-input branch_en,
+//input branch_en,
 output reg [31:0] pc_out
 
     );
-  //  reg cnt=1;
+    reg cnt=1;
     
   
     
     always@(posedge clk)begin
     if (rst)begin
     pc_out=0;
+    cnt=1;
     end
-   // else if (cnt)begin
-  //  pc_out=0;
- //   cnt=0;
- //   end
-    else if(branch_en)begin
-    pc_out=pc_in;
+    else if (cnt)begin
+    pc_out=0;
+    cnt=0;
     end
+   
+  //  else if(branch_en)begin
+  //  pc_out=pc_in;
+  //  end
     else begin
-    pc_out=pc_in+4;
+    pc_out=pc_in;
     end
     end
 endmodule

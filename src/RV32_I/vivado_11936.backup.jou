@@ -1,0 +1,102 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Tue Aug  6 17:03:24 2024
+# Process ID: 11936
+# Current directory: C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8692 C:\Users\Fayz\OneDrive\Desktop\SV_PRACTICE\RV32_I\RV32_I.xpr
+# Log file: C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/vivado.log
+# Journal file: C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/RV32_I.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+source top_tb.tcl
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/pc_dut/pc_in}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/pc_dut/pc_out}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/pc_dut/clk}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/pc_dut/cnt}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/imem_dut/pc_in}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/imem_dut/clk}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/imem_dut/rst}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/imem_dut/data_out}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/imem_dut/memory}} 
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/imem_dut/memory}} 
+update_compile_order -fileset sources_1
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+update_compile_order -fileset sources_1
+relaunch_sim
+file mkdir C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/RV32_I.srcs/sim_1/new
+set_property SOURCE_SET sources_1 [get_filesets sim_1]
+close [ open C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/RV32_I.srcs/sim_1/new/memory.mem w ]
+add_files -fileset sim_1 C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/RV32_I.srcs/sim_1/new/memory.mem
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/ins}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/oprs1}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/oprs2}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/oprd}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/aluop}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/imm}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/wrt_en}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/i_type}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/r_type}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dut_dec/imm_d}} 
+relaunch_sim
+close [ open C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/RV32_I.srcs/sources_1/new/alu.v w ]
+add_files C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/RV32_I.srcs/sources_1/new/alu.v
+update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/alu_dut/in1}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/alu_dut/in2}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/alu_dut/alu_out}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/alu_dut/aluop}} 
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/reg_dut_inst/register}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/reg_dut_inst/wrt_data}} 
+relaunch_sim

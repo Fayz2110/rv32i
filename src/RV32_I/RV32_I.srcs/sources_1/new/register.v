@@ -19,7 +19,7 @@ always @(posedge clk or rst)begin
             register[i] = 0;
         end
     end 
-    if(wrt_en)begin
+    else if(wrt_en)begin
     register[oprd]<=wrt_data;
     register[0]=0;
     end

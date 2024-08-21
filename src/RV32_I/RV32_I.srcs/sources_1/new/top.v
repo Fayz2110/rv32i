@@ -15,15 +15,15 @@ wire [3:0]aluop;
 wire[1:0] mem_mask;
 
 
-wire wrt_en,alu_sel1,alu_sel2,mem_wrt_en,mem_rd_en,wrt_back_sel,branch_en,branch_sel;
+wire wrt_en,alu_sel1,alu_sel2,mem_wrt_en,mem_rd_en,wrt_back_sel,branch_en,branch_sel,jal_pc,jal_rd_en;
 
 wire [31:0] rs1,rs2;
 
-wire [31:0] pc_out,mem_dout,alu_out,dmem_dout,branch_pc,pc_in;
+wire [31:0] pc_out,mem_dout,alu_out,dmem_dout,branch_pc,pc_in,pc;
 wire[2:0] branch_op;
-
+assign pc=pc_out;
 assign branch_pc=alu_out;
-assign pc_in=(branch_en)?branch_pc:(rst)?0:pc_out;
+assign pc_in=(branch_en & branch_sel||jal_pc)?branch_pc:pc+4;
 decode dec_inst(
     .ins(mem_dout),
     .oprs1(oprs1),
@@ -39,7 +39,9 @@ decode dec_inst(
     .mem_rd_en(mem_rd_en),
     .wrt_back_sel(wrt_back_sel),
     .branch_en(branch_en),
-    .branch_op(branch_op)
+    .branch_op(branch_op),
+    .jal_pc(jal_pc),
+    .jal_rd(jal_rd_en)
 );
 
 register reg_inst(
@@ -49,7 +51,7 @@ register reg_inst(
     .oprs1(oprs1),
     .oprs2(oprs2),
     .oprd(oprd),
-    .wrt_data((wrt_back_sel==1)?dmem_dout:alu_out),
+    .wrt_data((wrt_back_sel)?dmem_dout:(jal_rd_en)?pc_out+4:alu_out),
     .rs1(rs1),
     .rs2(rs2)
 );
@@ -58,8 +60,8 @@ pc pc_inst(
 .clk(clk),
 .pc_in(pc_in),
 .pc_out(pc_out),
-.rst(rst),
-.branch_en(branch_en)
+.rst(rst)
+
 );
 
 Imem imem_inst(
