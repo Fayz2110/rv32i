@@ -3,12 +3,14 @@
 module top_tb;
 reg clk;
 reg rst;
+wire led;
 
 
 
 top dut (
     .rst(rst),
-    .clk(clk)
+    .clk(clk),
+    .led(led)
    
 );
 
@@ -20,7 +22,7 @@ always begin
        clk=0;
         rst = 1;
         #10 rst=0;
-        #30 rst=1;
+     //   #30 rst=1;
         #20 rst=0;
        
         
@@ -30,4 +32,4 @@ always begin
         #1000 $stop;
     end
    
-endmodule
+endmodule 

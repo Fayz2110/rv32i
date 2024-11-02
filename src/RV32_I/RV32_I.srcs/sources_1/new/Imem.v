@@ -32,31 +32,30 @@ output reg [31:0] data_out
  reg cnt;
  reg[31:0] pc;
  integer i;
-  initial begin
+ /* initial begin
         $readmemh("mem.txt", memory); // Use $readmemb for binary file
-        cnt=1;
-    end
+        
+    end */
   
- always @(posedge clk or pc_in) begin
- if(rst)begin
- for(i=0;i<=4095;i=i+1)begin
-    memory[i]=0;
-    data_out=0;
-    
-    $readmemh("mem.txt", memory);
-    end
- end
- else begin
+ always @( pc_in) begin
+  $readmemh("mem.txt", memory); 
+ 
  pc=pc_in[31:2];
  data_out=memory[pc_in[31:2]];
- end
- 
  
  end
  
- initial begin
-     // Display a message with time and values
-     $monitor("At time %0t: Value of signal pc_in = %0d, Value of signal data_out = %0d", $time, pc_in[31:2], data_out);
- end
+ always@(rst) begin
+ if(rst)begin
+ 
+
+  for(i=0;i<=4095;i=i+1)begin
+     memory[i]<=0;
+     data_out<=0;
+     
+     $readmemh("mem.txt", memory);
+     end
+  end
+  end
     
 endmodule

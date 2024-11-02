@@ -76,14 +76,18 @@ output reg [31:0] data_out
      end
      end
     
-    always@(posedge clk or rst)begin
-    address_hld=address;
+    always@( rst)begin
+    
     if(rst)begin
     for(i=0;i<=4095;i=i+1)begin
-    d_memory[i]=0;
+    d_memory[i]<=0;
     end
     end
-    else if(wrt_en) begin
+    end
+    
+    always@(posedge clk)begin
+     if(wrt_en) begin
+      address_hld=address;
     case(mask)
         2'b01:begin
         address_hld=address_hld%4;
@@ -118,8 +122,8 @@ output reg [31:0] data_out
         endcase
     end
     
-    
-        
     end
+        
+    
     
 endmodule

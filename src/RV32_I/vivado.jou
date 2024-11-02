@@ -2,95 +2,96 @@
 # Vivado v2018.2 (64-bit)
 # SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
 # IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
-# Start of session at: Tue Aug 20 12:33:49 2024
-# Process ID: 16164
+# Start of session at: Sat Nov  2 08:26:16 2024
+# Process ID: 16852
 # Current directory: C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent8692 C:\Users\Fayz\OneDrive\Desktop\SV_PRACTICE\RV32_I\RV32_I.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent6108 C:\Users\Fayz\OneDrive\Desktop\SV_PRACTICE\RV32_I\RV32_I.xpr
 # Log file: C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/vivado.log
 # Journal file: C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/RV32_I.xpr
 update_compile_order -fileset sources_1
+update_compile_order -fileset sources_1
 launch_simulation
 source top_tb.tcl
-current_wave_config {}
-add_wave {{/top_tb/dut/pc_inst/pc_in}} 
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/pc_inst/branch_en}} 
+add_wave {{/top_tb/dut/csr_inst/csr_en}} 
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/pc_inst/pc_out}} 
+add_wave {{/top_tb/dut/csr_inst/wrt_en}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/csr_inst/csr_offset}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/csr_inst/rs1_in}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/csr_inst/csr_out}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/csr_inst/mtvec_reg}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/csr_inst/mepc_reg}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/csr_inst/csr_reg}} 
 relaunch_sim
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/pc_out}} 
+add_wave {{/top_tb/dut/dec_inst/csr_offset}} 
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/pc_in}} 
+add_wave {{/top_tb/dut/dec_inst/Csr_sig}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dec_inst/csr_wrt_en}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
 relaunch_sim
 relaunch_sim
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/imem_inst/pc_in}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/imem_inst/data_out}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
+add_wave {{/top_tb/dut/dec_inst/ins}} 
 relaunch_sim
 current_wave_config {Untitled 1}
 add_wave {{/top_tb/dut/imem_inst/pc}} 
 relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/pc}} 
 relaunch_sim
 relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/branch_dut/OPA}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/branch_dut/OPB}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/branch_dut/branch_sel}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/branch_dut/branch_en}} 
 relaunch_sim
 relaunch_sim
 relaunch_sim
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/branch_dut/func3}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
+add_wave {{/top_tb/dut/dec_inst/i_type}} 
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/imm}} 
+add_wave {{/top_tb/dut/dec_inst/r_type}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dec_inst/branch}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dec_inst/jalr_sig}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dec_inst/jal_sig}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dec_inst/load}} 
 current_wave_config {Untitled 1}
 add_wave {{/top_tb/dut/alu_inst/in1}} 
 current_wave_config {Untitled 1}
 add_wave {{/top_tb/dut/alu_inst/in2}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/alu_inst/aluop}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/alu_inst/alu_out}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/imm_jal}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
 relaunch_sim
 current_wave_config {Untitled 1}
 add_wave {{/top_tb/dut/dec_inst/imm_sb}} 
 relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/branch_dut/OPB}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/branch_dut/OPA}} 
 relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/pc_inst/pc_in}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/pc_inst/pc_out}} 
+relaunch_sim
+relaunch_sim
+relaunch_sim
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dec_inst/u_type}} 
+relaunch_sim
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dec_inst/imm}} 
 relaunch_sim
 relaunch_sim
 current_wave_config {Untitled 1}
@@ -104,78 +105,26 @@ add_wave {{/top_tb/dut/dec_inst/store}}
 current_wave_config {Untitled 1}
 add_wave {{/top_tb/dut/dec_inst/branch}} 
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/u_type}} 
-current_wave_config {Untitled 1}
 add_wave {{/top_tb/dut/dec_inst/auipc_sig}} 
 current_wave_config {Untitled 1}
 add_wave {{/top_tb/dut/dec_inst/jal_sig}} 
 current_wave_config {Untitled 1}
 add_wave {{/top_tb/dut/dec_inst/jalr_sig}} 
+current_wave_config {Untitled 1}
+add_wave {{/top_tb/dut/dec_inst/csr_sig}} 
 relaunch_sim
 relaunch_sim
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/ins}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/imm_d}} 
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/i_type}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/load}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/store}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/jalr_sig}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/branch}} 
-relaunch_sim
+add_wave {{/top_tb/dut/dec_inst/imm_auipc}} 
 relaunch_sim
 relaunch_sim
 relaunch_sim
 relaunch_sim
 relaunch_sim
 current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/oprs1}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/oprs2}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/oprd}} 
+add_wave {{/top_tb/dut/dec_inst/imm_jal}} 
 relaunch_sim
 relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/aluop}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/alu_op2_sel}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/alu_op1_sel}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/wrt_back_sel}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/jal_pc}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/jal_rd}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/i_type}} 
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/dec_inst/i_type}} {{/top_tb/dut/dec_inst/r_type}} {{/top_tb/dut/dec_inst/load}} {{/top_tb/dut/dec_inst/store}} {{/top_tb/dut/dec_inst/branch}} {{/top_tb/dut/dec_inst/u_type}} {{/top_tb/dut/dec_inst/auipc_sig}} {{/top_tb/dut/dec_inst/jal_sig}} {{/top_tb/dut/dec_inst/jalr_sig}} 
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-relaunch_sim
-current_wave_config {Untitled 1}
-add_wave {{/top_tb/dut/reg_inst/register[5]}} 
 relaunch_sim
 relaunch_sim
 relaunch_sim

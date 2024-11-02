@@ -1,0 +1,21 @@
+#-----------------------------------------------------------
+# Vivado v2018.2 (64-bit)
+# SW Build 2258646 on Thu Jun 14 20:03:12 MDT 2018
+# IP Build 2256618 on Thu Jun 14 22:10:49 MDT 2018
+# Start of session at: Mon Oct 28 13:08:57 2024
+# Process ID: 22044
+# Current directory: C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4736 C:\Users\Fayz\OneDrive\Desktop\SV_PRACTICE\RV32_I\RV32_I.xpr
+# Log file: C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/vivado.log
+# Journal file: C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I\vivado.jou
+#-----------------------------------------------------------
+sstart_guioopen_project C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/RV32_I/RV32_I.xpruupdate_compile_order -fileset sources_1close_project
+open_project C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/AXI4-LITE/AXI4-LITE.xpr
+update_compile_order -fileset sources_1
+file mkdir C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/AXI4-LITE/AXI4-LITE.sdk
+write_hwdef -force  -file C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/AXI4-LITE/AXI4-LITE.sdk/AXI_4_top.hdf
+write_verilog -mode funcsim <TOP.v>
+generate_target all [get_files C:/Users/Fayz/OneDrive/Desktop/SV_PRACTICE/AXI4-LITE/AXI4-LITE.srcs/sources_1/bd/design_2/design_2.bd]
+synth_design -rtl -name rtl_1
+write_verilog -mode funcsim <TOP.v>
+write_verilog -mode funcsim TOP.v
